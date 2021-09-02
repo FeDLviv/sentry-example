@@ -12,8 +12,15 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    sentryVersion = '5.1.2'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation "io.sentry:sentry-spring-boot-starter:${sentryVersion}"
+    
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
